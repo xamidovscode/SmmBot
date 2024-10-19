@@ -59,11 +59,11 @@ async def check_subscription_handler(callback_query: types.CallbackQuery):
     is_subscribed = await check_subscription(user_id)
 
     if is_subscribed:
-        file_path = 'soffcrm.png'
+        file_path = "qo'llanma.pdf"
         input_file = FSInputFile(file_path)
         await save_user_id(user_id)
         await bot.send_message(chat_id=user_id, text="Obuna uchun rahmat!🥳🥳🥳")
-        await bot.send_document(chat_id=user_id, document=input_file, caption="O'quv Markazlar Bankrot Bo'lishiga Sabab Bo'ladigan Top 3 ta Xato")
+        await bot.send_document(chat_id=user_id, document=input_file, caption="Bonus Qo'llanma 🎁\n\nO'quv Markazlar Bankrot Bo'lishiga Sabab Bo'ladigan Top 3 ta Xato")
     else:
         await bot.send_message(chat_id=user_id, text=f"Siz hali kanalga obuna bo'lmagansiz. Iltimos, obuna bo'ling.")
     await callback_query.answer()
