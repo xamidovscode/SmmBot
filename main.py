@@ -59,7 +59,7 @@ async def check_subscription_handler(callback_query: types.CallbackQuery):
     is_subscribed = await check_subscription(user_id)
 
     if is_subscribed:
-        file_path = "qollanma.pdf"
+        file_path = "soffcrm.png"
         input_file = FSInputFile(file_path)
         await save_user_id(user_id)
         await bot.send_message(chat_id=user_id, text="Obuna uchun rahmat!🥳🥳🥳")
