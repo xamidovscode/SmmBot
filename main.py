@@ -8,6 +8,7 @@ from aiogram import F
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 support_token = '7957119245:AAHd5s9tC74mp8Krbs8CuGZ250qfGGPPOC0'
+# support_token = '7463219824:AAGV_Q0Xyo6EY1m6a_4Vavl5YIUugLr7kMY'
 channel_id = '@soffcrm'  # Kanal username'ni kiriting (masalan, '@your_channel')
 
 bot = Bot(token=support_token)
@@ -59,7 +60,7 @@ async def check_subscription_handler(callback_query: types.CallbackQuery):
     is_subscribed = await check_subscription(user_id)
 
     if is_subscribed:
-        file_path = "soffcrm.png"
+        file_path = "qollanma.pdf"
         input_file = FSInputFile(file_path)
         await save_user_id(user_id)
         await bot.send_message(chat_id=user_id, text="Obuna uchun rahmat!🥳🥳🥳")
